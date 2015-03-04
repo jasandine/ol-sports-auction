@@ -1,0 +1,1 @@
+Olsport = Ember.Application.create();
