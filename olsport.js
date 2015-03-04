@@ -1,1 +1,3 @@
-Olsport = Ember.Application.create();
+Olsport = Ember.Application.create({
+  LOG_TRANSITIONS: true
+});
