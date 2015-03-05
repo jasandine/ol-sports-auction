@@ -1,5 +1,5 @@
 Olsport.LotRoute = Ember.Route.extend({
-  model: function() {
-    return this.store.find('lot');
+  model: function(params) {
+    return this.store.find('lot', params.lot_id);
   }
 });
