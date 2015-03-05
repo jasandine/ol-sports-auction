@@ -1,5 +1,6 @@
 Olsport.Router.map(function(){
-  this.resource('auction', {path: '/'});
-  this.resource('lot');
-  this.resource('item');
+  this.resource('auctions', {path: '/'});
+  this.resource('auction', {path: 'auctions/:auction_id'}, function() {
+    this.resource('new-lot');
+  });
 });

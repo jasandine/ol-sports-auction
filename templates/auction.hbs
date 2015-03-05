@@ -1,5 +1,36 @@
-{{#each auction in model}}
-  {{auction.name}}
-{{/each}}
+<div class="row">
+  <section class="col-md-6">
+      <h2>{{name}}</h2>
+      <p>{{location}}</p>
+      <p>{{date}}</p>
+      <p>{{description}}</p>
+  </section>
+  <section class="col-md-6">
+    <h2>Lots</h2>
+    <!-- list of lots-->
+  </section>
+</div>
 
-{{name}}
+<div class="row">
+  <section class="col-md-6">
+  {{#if isLotFormShowing}}
+
+    <h2>Add a new lot</h2>
+<!--WE WILL BE DOING AN OUTLET HERES OL' SPORT!  -->
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        {{input value=title id="title" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        {{textarea value=description id="description" class="form-control" rows="15"}}
+      </div>
+      <button class="btn btn-primary" {{action 'addLot'}}>Add</button>
+    </form>
+
+  {{else}}
+    <button class="btn btn-info" {{action 'showLotForm'}}>Add a new lot</button>
+  {{/if}}
+  </section>
+</div>

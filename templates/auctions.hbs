@@ -1,0 +1,8 @@
+{{#each auction in model}}
+<section>
+    <h2>{{#link-to 'auction' auction}}{{auction.name}}{{/link-to}}</h2>
+    <p>{{auction.location}}</p>
+    <p>{{auction.date}}</p>
+    <p>{{auction.description}}</p>
+</section>
+{{/each}}
