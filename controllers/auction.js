@@ -1,12 +1,12 @@
 Olsport.AuctionController = Ember.ObjectController.extend({
-  isLotFormShowing: false,
-  // needs: ["new-lot"],
+  // isLotFormShowing: false,
   actions: {
-    showLotForm: function() {
-      this.set('isLotFormShowing', true);
-    },
-    // addNewLot: function() {
-    //   this.controllerFor('new-lot').send('save');
-    // }
+    // showLotForm: function() {
+    //   this.set('isLotFormShowing', true);
+    // },
+    deleteLot: function(lot) {
+      this.get('lots').removeObject(lot);
+      lot.destroyRecord();
+    }
   }
 });
