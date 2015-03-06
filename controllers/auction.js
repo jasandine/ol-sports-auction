@@ -6,6 +6,7 @@ Olsport.AuctionController = Ember.ObjectController.extend({
     // },
     deleteLot: function(lot) {
       this.get('lots').removeObject(lot);
+      this.get('model').save();
       lot.destroyRecord();
     }
   }
